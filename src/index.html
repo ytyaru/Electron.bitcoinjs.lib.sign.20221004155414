@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head prefix="og: https://ogp.me/ns# article: https://ogp.me/ns/article#">
+<meta charset="utf-8">
+<!-- HTML内JS呼出禁止など。不都合ならコメントアウトすること。 -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+<title>Electron.bitcoinjs.lib.sign</title>
+<meta name="description" content="create_sendで作成されたトランザクションに署名する（bitcoinjs-libのsignInputで）">
+<meta name="author" content="ytyaru">
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/ui.css">
+<script src="js/electron/app/mpchain.js"></script>
+<script src="js/electron/app/throttle.js"></script>
+</head>
+<body>
+<h1>Electron.bitcoinjs.lib.sign</h1>
+<p>create_sendで作成されたトランザクションに署名する（bitcoinjs-libのsignInputで）</p>
+<table><caption>Request</caption>
+<tr><th>From</th><td><input id="from" value="MEHCqJbgiNERCH3bRAtNSSD9uxPViEX1nu"></td></tr>
+<tr><th>To</th><td><input id="to" value="MEHCqJbgiNERCH3bRAtNSSD9uxPViEX1nu"></td></tr>
+<tr><th>Quantity</th><td><input id="quantity" type="number" min="0" value="11411400"></td></tr>
+<tr><th>Fee/KB</th><td><input id="fee-per-kb" type="number" min="0" max="200" value="10"></td></tr>
+</table>
+<table><caption>Response</caption>
+<tr><th>create_send</th><td><textarea id="result-create-send"></textarea></td></tr>
+<tr><th>decode-tx-hex</th><td><textarea id="result-decode-tx-hex"></textarea></td></tr>
+<tr><th>sign-input</th><td><textarea id="sign-input"></textarea></td></tr>
+</table>
+<script src="js/electron/renderer.js"></script>
+</body>
+</html>
+

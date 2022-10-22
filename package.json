@@ -1,0 +1,25 @@
+{
+  "name": "my-electron-app",
+  "version": "1.0.0",
+  "description": "create_sendで作成されたトランザクションに署名する（bitcoinjs-libのsignInputで）",
+  "main": "src/js/electron/main.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bitcoinjs-lib": "^6.0.2",
+    "coininfo": "^5.2.1",
+    "ecpair": "^2.1.0",
+    "electron": "^21.0.1",
+    "electron-fetch": "^1.9.1",
+    "tiny-secp256k1": "^2.2.1",
+    "wif": "^2.0.6"
+  }
+}
